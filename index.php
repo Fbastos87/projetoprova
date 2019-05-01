@@ -34,7 +34,7 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title text-center" id="myModalLabel">Adicionar Pessoas</h4>
+							<h4 class="modal-title text-center" id="myModalLabel">Cadastrar Pessoas</h4>
 							<form action=salvar.php>
 							<p>Nome</p>
 							<input type=text name=nome1>
@@ -43,7 +43,7 @@
 							<p>Salario</p>
 							<input type=number name=salario>
 							<br><br>
-							<input type=submit value=Salvar>
+							<input class="btn btn-success btn-xs" type=submit value=Salvar>
 							</form> 
 							<br><br>
 							<a href=index.php>Voltar</a>  
@@ -88,12 +88,15 @@ echo 'Connection failed: ' . $e->getMessage();
         echo "<td align=left>". $row['nome'] . "</td>";
         echo "<td align=left>". $row['data_nasc'] . "</td>";
 		echo "<td align=left>". $row['salario'] . "</td>";?>
-		<td> <a class="btn btn-primary btn-xs" href=editar.php?id="<?php echo $row['id']?>">Editar</a> </td>
+		<td> <a class="btn btn-primary btn-xs" href=editar.php?id="<?php echo $row['id']?>" >Editar</a> </td>
 		<td> <a class="btn btn-danger btn-xs" href=excluir.php?id="<?php echo $row['id']?>">Excluir</a> </td>
 		<?php
         echo "</tr>";
         }
 ?>
+
+
+
     </tbody>
 </table>
 
