@@ -13,6 +13,8 @@
     
     <script type="text/javascript" charset="utf8" 
       src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+	  
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -23,8 +25,40 @@
 </head>
 <body>
 <br><br>
-<a class="btn btn-success btn-xs" href=incluir.php> Adicionar Pessoas</a>
+<button type="button"  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalcad">Cadastrar</button>
+
+
+			<!-- Inicio Modal -->
+			<div class="modal fade" id="myModalcad" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title text-center" id="myModalLabel">Adicionar Pessoas</h4>
+							<form action=salvar.php>
+							<p>Nome</p>
+							<input type=text name=nome1>
+							<p>Data de Nascimento</p>
+							<input type=text name=data_nasc>
+							<p>Salario</p>
+							<input type=number name=salario>
+							<br><br>
+							<input type=submit value=Salvar>
+							</form> 
+							<br><br>
+							<a href=index.php>Voltar</a>  
+							
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- Fim Modal -->
+
 <br><br>
+
+
+
 
 <table id="table_id" class="display">
     <thead>
@@ -40,8 +74,8 @@
     <tbody>
 <?php
 $dsn = 'mysql:dbname=projeto;host=127.0.0.1';
-$user = 'root'; 
-$password = '';
+$user = 'root'; //mysql usuario=root
+$password = '';//sem senha
 try {
 $dbh = new PDO($dsn, $user, $password);
 } catch (PDOException $e) {
@@ -61,6 +95,8 @@ echo 'Connection failed: ' . $e->getMessage();
         }
 ?>
     </tbody>
-</table>    
+</table>
+
+
 </body>
 </html>
