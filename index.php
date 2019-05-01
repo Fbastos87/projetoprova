@@ -44,9 +44,9 @@
 							<input type=number name=salario>
 							<br><br>
 							<input class="btn btn-success btn-xs" type=submit value=Salvar>
+							<a class="btn btn-danger btn-xs" href=index.php>Voltar</a> 
 							</form> 
-							<br><br>
-							<a href=index.php>Voltar</a>  
+						
 							
 						</div>
 
