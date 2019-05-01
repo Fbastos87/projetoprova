@@ -1,8 +1,8 @@
-create database prova;
+create database projeto;
 
-use prova;
+use projeto;
 
-create table usuario (
+create table cadastro (
 id int primary key,
 nome varchar(50),
 data_nasc date,
