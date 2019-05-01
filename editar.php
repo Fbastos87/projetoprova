@@ -25,9 +25,9 @@ foreach ($dbh->query($sql) as $row) {
     echo "<br><br>"?>
 	
 	<input class="btn btn-primary btn-xs" type=submit value=Salvar>
+	<a class="btn btn-danger btn-xs" href=index.php>Voltar</a>
 	<?php
 echo "</form>";
+
 }
-echo "<br><br>
-<a href=index.php>Voltar</a> ";
 ?>
