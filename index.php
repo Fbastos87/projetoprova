@@ -28,7 +28,7 @@
 <button type="button"  class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalcad">Cadastrar</button>
 
 
-			<!-- Inicio Modal -->
+			
 			<div class="modal fade" id="myModalcad" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -53,7 +53,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- Fim Modal -->
+			
 
 <br><br>
 
